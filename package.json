@@ -6,13 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seed:demo": "node --env-file=.env.local scripts/seed-demo.mjs",
+    "seed:demo:remove": "node --env-file=.env.local scripts/seed-demo.mjs --remove"
   },
   "dependencies": {
+    "lucide-react": "^1.66.0",
     "mongoose": "^9.11.4",
     "next": "16.4.3",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "recharts": "^3.10.1"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
