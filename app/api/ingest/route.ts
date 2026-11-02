@@ -7,6 +7,7 @@ import DeviceReading from '@/lib/models/DeviceReading'
 const SUPPORTED_SCHEMA = 'royalhatch.readings.v1'
 
 function hasValidApiKey(request: NextRequest) {
+  console.log('line 10', request)
   const provided = request.headers.get('x-api-key')
   const expected = process.env.DEVICE_API_KEY
   if (!provided || !expected) return false
@@ -22,6 +23,7 @@ export async function POST(request: NextRequest) {
   }
 
   let body: unknown
+  console.log('line 24', request)
   try {
     body = await request.json()
   } catch {
